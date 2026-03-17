@@ -48,41 +48,12 @@
     padding-left: 0rem; 
     letter-spacing: 2px;
 }
-ul {
-    list-style-type: none;
-    max-width: fit-content;
-    margin: 0 auto;
 
-}
-
-li a,
-li a:visited {
-    text-decoration: none;
-    color: #333;
-}
-
-.kortti1,
-.kortti2,
-.kortti3 {
+.yhteystiedot {
     display: flex;
-    padding: 0px;
-    margin-left: 100px;
-    max-width: 600px;
-   
-}
-
-
-
-.salikuva {
-    display: flex;
-    justify-content: right;
-    margin-top: 20px;
-}
-
-.Maincontent {
-    display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    justify-content: wrap;
+    justify-content: center; 
+    margin-top: 0px;
+    background-color: #444;
+    padding: 15px;
+    gap: 60px  ;
 }
