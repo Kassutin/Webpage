@@ -49,6 +49,26 @@
     letter-spacing: 2px;
 }
 
+.Maincontent {
+    display: flex;
+    justify-content: left; 
+    flex-direction: row;
+    margin-top: 0px;
+    padding: 15px;
+    gap: 100px  ;
+    font-size: 25px;
+    
+}
+
+.salikuva {
+    display: flex;
+    justify-content: right; 
+    margin-top: 0px;
+    
+    padding: 15px;
+    gap: 60px  ;
+}
+
 .yhteystiedot {
     display: flex;
     justify-content: center; 
@@ -56,4 +76,29 @@
     background-color: #444;
     padding: 15px;
     gap: 60px  ;
+}
+
+.card1, .card2, .card3 {
+  display: flex;
+  width: 300px; 
+  height: 450px; 
+  border-radius: 15px;
+  overflow: hidden; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.card-image1 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
+}
+
+.banner {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
