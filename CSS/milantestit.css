@@ -1,9 +1,12 @@
-/* jäsenyyssivun css-kokeilua */
+/* Nämä asetukset voisi laittaa kaikille sivuille, värin voi mieluusti vaihtaa!*/
 html, body { 
     height: 100%;
     margin: 0;
+    background-color: lightgray;
+    /* Tänne voisi merkata fontit. Varmaan käytetään kaikkialla samaa fonttia? */
 }
 
+/* jäsenyyssivun css-kokeilua, täällä ei ole gridiä, pelkkiä flexboxeja. Tarvitaanko grid? */
 .jasenyydet {
     display: flex;
     flex-direction: row;
@@ -12,15 +15,15 @@ html, body {
     justify-content: space-between;
     flex-wrap: wrap;
     background-color: #0c92c3;
-    padding: 20px;
+    gap: 20px;
 }
 .jasenyyskortti {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background-color: white;
-    border: 5px solid white;
+    background-color: lightgrey;
+    border: 5px solid lightgray;
     border-radius: 10px;
     width: 250px;
     height: 300px;
@@ -43,14 +46,14 @@ form {
     margin: 0 auto;
     width: 400px;
     padding: 1em;
-    border: 1px solid white;
+    border: 1px solid #0c92c3;
     border-radius: 10px;
     vertical-align: top;
     display: inline-block;
     text-align: left;
 }
 
-/*palvelusivun css-kokeilua */
+/*palvelusivun css-kokeilua: Täällä on nyt grid-rakenne */
 
 .palvelusivu {
     display:grid;
@@ -80,14 +83,17 @@ table th, table td {
     text-align: center;
 }
 
-h1 {
-    text-align: center;
-}
-
 .intro {
     text-align: center;
     padding: 5rem;
+    background-color: #0c92c3;
 }
+
+.tutustumismainos, .lomakeosio {
+    text-align: center;
+}
+
+/*Headerin ja footerin sisällöt on täällä*/
 
 .header,
 .footer {
