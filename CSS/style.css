@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #e2e1e1;
+}
+
 .header,
 .footer {
     background-color: #333;
@@ -13,10 +17,22 @@
     margin-bottom: 0px;
 }
 
+.linkit {
+    display: flex;
+    justify-content: center; 
+    margin-top: 0px;
+    background-color: #444;
+    padding: 10px;
+    gap: 60px  ;
+}
+
+.contactbutton {
+    padding-right: 400px;
+}
 
 .navigaatiomenu {
     display: flex;
-    justify-content: center; 
+    justify-content: space-between; 
     margin-top: 0px;
     background-color: #444;
     padding: 10px;
@@ -49,6 +65,14 @@
     letter-spacing: 2px;
 }
 
+.contactbutton {
+    justify-content: right; 
+    margin-top: 0px;
+    background-color: #4a93ec;
+    padding: 10px;
+    gap: 60px; 
+}
+
 .Maincontent {
     display: flex;
     justify-content: left; 
@@ -57,16 +81,19 @@
     padding: 15px;
     gap: 100px  ;
     font-size: 25px;
-    
+    margin-left: 10%;
+    padding-right: 25%;
+   
+
 }
 
 .salikuva {
     display: flex;
     justify-content: right; 
     margin-top: 0px;
-    
     padding: 15px;
     gap: 60px  ;
+    
 }
 
 .yhteystiedot {
@@ -96,9 +123,21 @@
   display: block;
 }
 
+.etusivukortit {
+    display: flex;
+    justify-content: left;
+    gap: 100px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    margin-left: 15%;
+
+}
+
 .banner {
     height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
+

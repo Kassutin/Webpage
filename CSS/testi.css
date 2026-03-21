@@ -1,0 +1,19 @@
+.html{
+  display: grid;
+  grid-template-areas:
+    "body" "body"
+    "nav"   "nav"
+    "header" "header"
+    "card1" "card2" "card3"
+    "footer footer";
+  grid-template-columns: 220px 1fr;
+  gap: 16px;
+} 
+
+main {
+  display: grid;
+  grid-template-areas:
+  "maincontent" "etusivukortit"
+  "maincontent" "etusivukortit";
+}
+
