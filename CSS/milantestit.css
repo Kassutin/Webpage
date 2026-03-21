@@ -1,26 +1,42 @@
-/* jäsenyyssivun css-kokeilua */
+/* Nämä asetukset voisi laittaa kaikille sivuille, värin voi mieluusti vaihtaa!*/
+html, body { 
+    height: 100%;
+    /*margin: 0;*/
+    background-color: lightgray;
+    /* Tänne voisi merkata fontit. Varmaan käytetään kaikkialla samaa fonttia? */
+}
+
+/* jäsenyyssivun css-kokeilua, täällä ei ole gridiä, pelkkiä flexboxeja. Tarvitaanko grid? */
 .jasenyydet {
     display: flex;
     flex-direction: row;
-    width: 100%;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     background-color: #0c92c3;
-    padding: 20px;
+    gap: 20px;
 }
 .jasenyyskortti {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background-color: white;
-    border: 5px solid white;
+    background-color: lightgrey;
+    border: 5px solid lightgray;
     border-radius: 10px;
     width: 250px;
     height: 300px;
     padding: 5px;
     gap: 5px;
+}
+
+.korttimarginaali {
+    background-color: #0c92c3;
+    padding: 1rem;
+}
+
+.teksti, .otsikko{
+    text-align: center;
 }
 
 .ikonit {
@@ -34,31 +50,33 @@ form {
     margin: 0 auto;
     width: 400px;
     padding: 1em;
-    border: 1px solid white;
+    border: 1px solid #0c92c3;
     border-radius: 10px;
     vertical-align: top;
     display: inline-block;
     text-align: left;
 }
 
-/*palvelusivun css-kokeilua */
+/*palvelusivun css-kokeilua: Täällä on nyt grid-rakenne */
 
-.palvelu { /*tämä ei toimi vielä! */
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 20px;
+.palvelusivu {
+    display:grid;
+    grid-auto-flow: row;
 }
 
-.palvelu div {
-    flex: 1 1 48%;
-    box-sizing: border-box;
-    gap: 5px;
+.palvelugrid {
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 5rem;
+    column-gap: 5rem;
+    padding: 5rem;
+
 }
 
 table {
     table-layout: fixed;
-    width: 50%;
+    width: auto;
     border-collapse: collapse;
     border: 2px solid #0c92c3;
 }
@@ -68,6 +86,18 @@ table th, table td {
     padding: 10px;
     text-align: center;
 }
+
+.intro {
+    text-align: center;
+    padding: 5rem;
+    background-color: #0c92c3;
+}
+
+.tutustumismainos, .lomakeosio {
+    text-align: center;
+}
+
+/*Headerin ja footerin sisällöt on täällä*/
 
 .header,
 .footer {

@@ -7,23 +7,25 @@
     </head>
 
     <body> 
-          <header class="header">
-        <nav class="navigaatiomenu">
-            
-                <a href="Landingpage.html">Aloitussivu</a></li>
-                <a href="Aboutus.html">Meistä</a></li>
-                <a href="Contact.html">Ota yhteyttä</a></li>
-                <a href="jasenyys.html">Jäsenyys</a></li>
-                <a href="palvelut.html">Palvelut</a></li>
-        </nav>
-    </header>
-        </nav>
+        <header class="header">
+            <nav class="navigaatiomenu">
+                
+                    <a href="Landingpage.html">Aloitussivu</a></li>
+                    <a href="Aboutus.html">Meistä</a></li>
+                    <a href="Contact.html">Ota yhteyttä</a></li>
+                    <a href="jasenyys.html">Jäsenyys</a></li>
+                    <a href="palvelut.html">Palvelut</a></li>
+            </nav>
+        </header>
 
         <main>
-        <h1>Jäsenyys</h1>
-        <p>Tervetuloa jäseneksi! Tutustu jäsenyysvaihtoehtoihimme ja valitse itsellesi parhaiten sopiva vaihtoehto.</p>
+            <section class="intro">
+                <h1>Jäsenyys</h1>
+                <p>Tervetuloa jäseneksi! Tutustu jäsenyysvaihtoehtoihimme ja valitse itsellesi parhaiten sopiva vaihtoehto.</p>
+            </section>
+            <div class="korttimarginaali">
+            <section class="jasenyydet">
 
-            <div class="jasenyydet">
                 <div class="jasenyyskortti kuntosali/ryhmaliikunta">
                     
                     <div class="otsikko">
@@ -132,38 +134,41 @@
                     </div>
                 </div>     
 
-            </div>
-
-            <p>Opiskelijat, eläkeläiset ja varusmiehet saavat 15 % alennusta.</p>
-        
-            <h2>Tutustumiskäynti</h2>
-            <p>Haluatko kokeilla palveluamme ennen ostopäätöksen tekoa? Tarjoamme yhden päivän tutustumiskäynnin ilmaiseksi. Täytäthän yhteydenottolomakkeen, niin olemme sinuun yhteydessä!</p>
-        
-            <h2>Yhteydenottolomake</h2>
-            <p>Haluatko tutustumiskäynnille vai löysitkö jo itsellesi sopivan jäsenyyden? Haluatko antaa palautetta? Kerro nimesi ja sähköpostiosoitteesi, niin otamme yhteyttä sinuun!</p>
+                <p>Opiskelijat, eläkeläiset ja varusmiehet saavat 15 % alennusta.</p>
             
-            <form>
-                <label for="name"> Nimesi </label>
-                <input type="text" id="name" name="name" placeholder="Nimesi"><br>
-                <label for="email">Sähköpostiosoitteesi</label>
-                <input type="email" id="email" placeholder="Sähköpostiosoitteesi">
-                <br>
-                <label for="reason">Kuinka voimme palvella?</label>
-                <select id="reason" name="reason">
-                    <option value="jasenyys">Jäsenyys</option>
-                    <option value="tutustumiskaynti">Tutustumiskäynti</option>
-                    <option value="muu">Muu</option>
-                </select>
-                <br>
-                <br>
-                <label for="text">Anna halutessasi lisätietoa tai palautetta. Ethän kirjoita tähän luottamuksellisia tietoja!</label>
-                <br>
-                <textarea id="text" name="text" rows="3" cols="40" placeholder="Kirjoita tähän"></textarea>
-                <br>
-                <button type="submit">Lähetä</button>
-                <br>
-            </form>
+            </section>
+            </div>
+            <section class="tutustumismainos">
+                <h2>Tutustumiskäynti</h2>
+                <p>Haluatko kokeilla palveluamme ennen ostopäätöksen tekoa? Tarjoamme yhden päivän tutustumiskäynnin ilmaiseksi. Täytäthän yhteydenottolomakkeen, niin olemme sinuun yhteydessä!</p>
+            </section>
 
+            <section class="lomakeosio">
+                <h2>Yhteydenottolomake</h2>
+                <p>Haluatko tutustumiskäynnille vai löysitkö jo itsellesi sopivan jäsenyyden? Haluatko antaa palautetta? Kerro nimesi ja sähköpostiosoitteesi, niin otamme yhteyttä sinuun!</p>
+                
+                <form>
+                    <label for="name"> Nimesi </label>
+                    <input type="text" id="name" name="name" placeholder="Nimesi"><br>
+                    <label for="email">Sähköpostiosoitteesi</label>
+                    <input type="email" id="email" placeholder="Sähköpostiosoitteesi">
+                    <br>
+                    <label for="reason">Kuinka voimme palvella?</label>
+                    <select id="reason" name="reason">
+                        <option value="jasenyys">Jäsenyys</option>
+                        <option value="tutustumiskaynti">Tutustumiskäynti</option>
+                        <option value="muu">Muu</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label for="text">Anna halutessasi lisätietoa tai palautetta. Ethän kirjoita tähän luottamuksellisia tietoja!</label>
+                    <br>
+                    <textarea id="text" name="text" rows="3" cols="40" placeholder="Kirjoita tähän"></textarea>
+                    <br>
+                    <button type="submit">Lähetä</button>
+                    <br>
+                </form>
+            </section>
         </main>
         
         <footer>
