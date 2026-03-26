@@ -17,12 +17,33 @@
     </header>
         </nav>
      <body>
-          <div class="Maincontent">
-            <h1>Ota yhteyttä</h1>
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-                    </div>
-            </div>
+        <div class="tekstiosio">
+            <h1>Jäikö jokin mietityttämään tai haluatko ottaa yhteyttä?</h1>
+            <p>Ota rohkeasti yhteyttä meihin!</p>
+        </div>
+                <section class="lomakeosio">
+                <h2>Yhteydenottolomake</h2>
+                
+                
+                <form>
+                    <label for="name"> Nimesi </label><br>
+                    <input type="text" id="name" name="name" placeholder="Nimesi"><br>
+                    <label for="email">Sähköpostiosoitteesi</label><br>
+                    <input type="email" id="email" placeholder="Sähköpostiosoitteesi"><br>
+                    <br>
+                    <label for="reason">Kuinka voimme palvella?</label><br>
+                    <select id="reason" name="reason"><br>
+                        <option value="jasenyys">Jäsenyys</option>
+                        <option value="tutustumiskaynti">Tutustumiskäynti</option>
+                        <option value="muu">Muu</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label for="text">Anna halutessasi lisätietoa tai palautetta. Ethän kirjoita tähän luottamuksellisia tietoja!</label>
+                    <br>
+                    <textarea id="text" name="text" rows="3" cols="40" placeholder="Kirjoita tähän"></textarea>
+                    <br>
+                    <button type="submit">Lähetä</button>
+                    <br>
+                </form>
+            </section>

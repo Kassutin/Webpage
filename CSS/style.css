@@ -4,23 +4,22 @@
     box-sizing: border-box;
 }
 
-<<<<<<< HEAD
-body {      
-    background-color: #e2e1e1;
-}
-
-=======
 main {
   display: grid;
   grid-template-areas:
     "banner"
-    "maincontent"
+    "maincontent" 
     "etusivukortit"
     "arvolupaus";
   grid-template-rows: rows;
   row-gap: 5rem;
   column-gap: 5rem;
   padding: 5rem;
+}
+
+html, body {
+    font-family: Arial, sans-serif;
+    background-color: lightgray;
 }
 
 .maincontent {
@@ -53,7 +52,6 @@ main {
 
 
 
->>>>>>> d842d5cb695e65e54cd4f675dba7e2a54120e7e3
 .header,
 .footer {
     background-color: #333;
@@ -78,11 +76,12 @@ main {
 
 .navigaatiomenu {
     display: flex;
-    justify-content: space-between; 
+    justify-content: center; 
     margin-top: 0px;
     background-color: #444;
     padding: 10px;
     gap: 60px  ;
+    
 }
 
 .navigaatiomenu a,
@@ -111,7 +110,6 @@ main {
     letter-spacing: 2px;
 }
 
-<<<<<<< HEAD
 .contactbutton {
     justify-content: right; 
     margin-top: 0px;
@@ -135,16 +133,16 @@ main {
 }
 
 .salikuva {
+    grid-area: salikuva;
     display: flex;
     justify-content: right; 
-    margin-top: 0px;
     padding: 15px;
     gap: 60px  ;
+    position: relative;
+    top: 0px;
     
 }
 
-=======
->>>>>>> d842d5cb695e65e54cd4f675dba7e2a54120e7e3
 .yhteystiedot {
     display: flex;
     justify-content: center; 
@@ -154,8 +152,19 @@ main {
     gap: 60px  ;
 }
 
-.card1, .card2, .card3 {
+.tekstiosio {
+    justify-content: left; 
+    margin-top: 0px;
+    padding: 15px;
+    gap: 10px;
+    font-size: 25px;
+    padding-left: 5%;
+    padding-right: 0%;
+    text-align: center;
+}
+.card1, .card2, .card3, .card4 {
   display: flex;
+  flex-direction: row;
   width: 300px; 
   height: 450px; 
   border-radius: 15px;
@@ -163,9 +172,63 @@ main {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   margin-bottom: 30px;
   margin-top: 30px;
+  position: relative;
 }
 
-.card-image1 {
+.text-overlay1 {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 300px;
+  padding: 20px;
+  background: rgb(11, 159, 196); 
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.text-overlay2 {
+  position : absolute;
+  top: 0;
+  left: 0%;
+  width: 300px;
+  padding: 20px;
+  background: rgb(11, 159, 196); 
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 15px 15px 0px 0px;
+}
+
+
+.text-overlay3 {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 300px;
+  padding: 20px;
+  background: rgb(11, 159, 196); 
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.text-overlay4 {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 300px;
+  padding: 20px;
+  background: rgb(11, 159, 196); 
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.card-image1, .card-image2, .card-image3, .card-image4 {
   width: 100%;
   height: 100%;
   object-fit: cover; 
@@ -174,19 +237,23 @@ main {
 
 .etusivukortit {
     display: flex;
-    justify-content: left;
+    justify-content: center;
     gap: 100px;
     margin-bottom: 30px;
     flex-wrap: wrap;
-    margin-left: 15%;
+    margin-left: 0 auto;
 
 }
 
-.banner {
-    height: 300px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+.lomakeosio {  
+  display: flex;
+  width: 600px; 
+  height: 450px; 
+  border-radius: 15px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  align-items: center;
+  background-color: rgb(11, 159, 196);
+  margin-left: 35%;
 }
 
