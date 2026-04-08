@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 main {
   display: grid;
   grid-template-areas:
@@ -11,15 +12,27 @@ main {
     "maincontent" 
     "etusivukortit"
     "arvolupaus";
-  grid-template-rows: rows;
-  row-gap: 5rem;
-  column-gap: 5rem;
-  padding: 5rem;
+  row-gap: 2rem; 
+    column-gap: 2rem;
+    padding: 2rem; 
+    max-width: 1400px;
+    margin: 0 auto; 
 }
 
-html, body {
-    font-family: Arial, sans-serif;
+html, body { 
+    height: 100%;
+    /*margin: 0;*/
     background-color: lightgray;
+    html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box; 
+}
 }
 
 .maincontent {
@@ -50,73 +63,6 @@ html, body {
     font-size: 25px;
 }
 
-
-
-.header,
-.footer {
-    background-color: #333;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    margin-bottom: 0px;
-}
-
-.linkit {
-    display: flex;
-    justify-content: center; 
-    margin-top: 0px;
-    background-color: #444;
-    padding: 10px;
-    gap: 60px  ;
-}
-
-.contactbutton {
-    padding-right: 400px;
-}
-
-.navigaatiomenu {
-    display: flex;
-    justify-content: center; 
-    margin-top: 0px;
-    background-color: #444;
-    padding: 10px;
-    gap: 60px  ;
-    
-}
-
-.navigaatiomenu a,
-.navigaatiomenu a:visited {
-    text-decoration: none;
-    color: white;
-}
-
-.navigaatiomenu a:hover,
-.navigaatiomenu a:focus {
-    background: #333;
-    color: white;
-    cursor: pointer;
-}
-
-.navigaatiomenu a {
-    display: block;
-}
-
-.navigaatiomenu a {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.navigaatiomenu a:hover {
-    padding-left: 0rem; 
-    letter-spacing: 2px;
-}
-
-.contactbutton {
-    justify-content: right; 
-    margin-top: 0px;
-    background-color: #4a93ec;
-    padding: 10px;
-    gap: 60px; 
-}
 
 .Maincontent {
     display: flex;
@@ -257,3 +203,52 @@ html, body {
   margin-left: 35%;
 }
 
+/*Header & Footer alle*/
+
+
+.header,
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+
+
+.navigaatiomenu {
+    display: flex;
+    justify-content: center; 
+    margin-top: auto;
+    background-color: #444;
+    padding: 10px;
+    gap: 60px  ;
+    
+}
+
+.navigaatiomenu a,
+.navigaatiomenu a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.navigaatiomenu a:hover,
+.navigaatiomenu a:focus {
+    background: #333;
+    color: white;
+    cursor: pointer;
+}
+
+.navigaatiomenu a {
+    display: block;
+}
+
+.navigaatiomenu a {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navigaatiomenu a:hover {
+    padding-left: 0rem; 
+    letter-spacing: 2px;
+}
