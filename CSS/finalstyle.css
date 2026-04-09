@@ -6,8 +6,12 @@
     box-sizing: border-box;
 }
 
-body {
+html, body { 
+    height: 100%;
+    /*margin: 0;*/
     background-color: whitesmoke;
+    font-family: sans-serif; 
+    font-size: 25px;   /* Tänne voisi merkata fontit. Varmaan käytetään kaikkialla samaa fonttia? */
 }
 
 /* HEADER */
@@ -228,7 +232,6 @@ main {
 }
 
 
-
 /* ABOUTUS */
 
 .Aboutus_main {
@@ -323,6 +326,130 @@ main {
 
 /* JÄSENYYS */
 
+.jasenyys_main {
+    text-align: center;
+}
+
+.jasenyydet {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.jasenyyskortti {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 15px;
+    width: 300px; 
+    height: 400px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.otsikko {
+    background-color: #0c92c3;
+    color: white;
+    height: 90px;
+    line-height: 90px;
+    width: 100%;
+    box-sizing: border-box;
+    align-self: stretch;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.teksti .hinta .otsikko {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+.ikonit {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.lomakealue {
+    text-align: center;
+}
+
+.jasenyyssivulomake {
+    background-color: #0c92c3;
+    margin: 0 auto;
+    width: 400px;
+    padding: 1em;
+    border: 1px solid #0c92c3;
+    border-radius: 10px;
+    vertical-align: top;
+    display: inline-block;
+    text-align: left;
+    font-size: 18px;
+}
+
 /* PALVELUT */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.palvelut_main {
+    display:grid;
+    grid-auto-flow: row;
+    grid-template-areas: 
+    "palvelut_intro"
+    "palvelugrid";
+    box-sizing: border-box;
+    row-gap: 2rem; 
+    column-gap: 1rem;
+    padding: 2rem; 
+    max-width: 100%;
+    margin: auto;
+    background-color: whitesmoke; 
+}
+
+.palvelut_intro {
+    grid-area: palvelut_intro;
+    text-align: center;
+    padding: 2rem;
+}
+
+.palvelugrid {
+    grid-area: palvelugrid;
+    display: grid;
+    grid-auto-flow: row;
+    max-width: 100%;
+    overflow: hidden;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: 1rem;
+    column-gap: 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #0c92c3;
+    font-size: 12px;
+}
+
+table th, table td {
+    border: 2px solid #0c92c3;
+    text-align: center;
+    white-space: normal;
+}
+
+table.wrapper {
+    overflow-x: auto;
+}
+
 
 /* FOOTER */

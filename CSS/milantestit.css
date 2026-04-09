@@ -16,8 +16,6 @@ html, body {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    background-color: whitesmoke;
-    gap: 20px;
 }
 
 .jasenyyskortti {
@@ -28,7 +26,7 @@ html, body {
     background-color: white;
     border-radius: 15px;
     width: 300px; 
-    height: 450px; 
+    height: 400px; 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     margin-bottom: 30px;
     margin-top: 30px;
@@ -37,16 +35,13 @@ html, body {
 
 .otsikko {
     background-color: #0c92c3;
+    color: white;
+    height: 90px;
     width: 100%;
     box-sizing: border-box;
     align-self: stretch;
     text-align: center;
     border-radius: 10px 10px 0 0;
-}
-
-.korttimarginaali {
-    background-color: whitesmoke;
-    padding: 1rem;
 }
 
 .teksti {

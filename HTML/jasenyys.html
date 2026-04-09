@@ -3,7 +3,7 @@
     <head>
         <meta charset="uft-8">
         <title>Jäsenyys</title>
-        <link rel="stylesheet" href="../CSS/milantestit.css">
+        <link rel="stylesheet" href="../CSS/finalstyle.css">
     </head>
 
     <body> 
@@ -18,12 +18,12 @@
             </nav>
         </header>
 
-        <main>
+        <main class="jasenyys_main">
             <section class="intro">
                 <h1>Jäsenyys</h1>
                 <p>Tervetuloa jäseneksi! Tutustu jäsenyysvaihtoehtoihimme ja valitse itsellesi parhaiten sopiva vaihtoehto.</p>
             </section>
-            <div class="korttimarginaali">
+            <div class="korttialue">
             <section class="jasenyydet">
 
                 <div class="jasenyyskortti kuntosali/ryhmaliikunta">
@@ -33,9 +33,9 @@
                     </div>
 
                     <div class="ikonit">
-                        <img src="images/kuntosalisymboli.png" width="50">
+                        <img src="images/kuntosalisymboli.png" width="80">
                         <p>/</p>
-                        <img src="images/ryhmaliikuntasymboli.png" width="50">
+                        <img src="images/ryhmaliikuntasymboli.png" width="80">
                     </div>
 
                     <div class="teksti">
@@ -54,7 +54,7 @@
                     </div>
 
                     <div class="ikonit">
-                        <img src="images/rentoutumissymboli.png" width="50" alt="Sininen joogaava hahmo">
+                        <img src="images/rentoutumissymboli.png" width="80" alt="Sininen joogaava hahmo">
                     </div>
 
                     <div class="teksti">
@@ -73,9 +73,9 @@
                     </div>
 
                     <div class="ikonit">
-                        <img src="images/kuntosalisymboli.png"width="50" alt="siniset käsipainot"/> 
+                        <img src="images/kuntosalisymboli.png"width="80" alt="siniset käsipainot"/> 
                         <p>+</p> 
-                        <img src="images/ryhmaliikuntasymboli.png"width="50" alt="kolme sinistä henkilöhahmoa vierekkäin"/>
+                        <img src="images/ryhmaliikuntasymboli.png"width="80" alt="kolme sinistä henkilöhahmoa vierekkäin"/>
                     </div>
 
                     <div class="teksti">
@@ -91,15 +91,15 @@
                 <div class="jasenyyskortti liikujapalaudu">
                     
                     <div class="otsikko">
-                        <h4> Liikuntapalvelu ja palautuminen</h4>
+                        <h4> Liikuntapalvelu ja palautumisplvelut</h4>
                     </div>
 
                     <div class="ikonit">
-                        <img src="images/kuntosalisymboli.png"width="50" alt="siniset käsipainot"/> 
+                        <img src="images/kuntosalisymboli.png"width="80" alt="siniset käsipainot"/> 
                         <p>/</p> 
-                        <img src="images/ryhmaliikuntasymboli.png"width="50" alt="kolme sinistä henkilöhahmoa vierekkäin"/> 
+                        <img src="images/ryhmaliikuntasymboli.png"width="80" alt="kolme sinistä henkilöhahmoa vierekkäin"/> 
                         <p>+</p> 
-                        <img src="images/rentoutumissymboli.png"width="50" alt="Sininen joogaava hahmo"/>
+                        <img src="images/rentoutumissymboli.png"width="80" alt="Sininen joogaava hahmo"/>
                     </div>
 
                     <div class="teksti">
@@ -118,11 +118,11 @@
                     </div>
 
                     <div class="ikonit">
-                        <img src="images/kuntosalisymboli.png"width="50" alt="siniset käsipainot"/> 
+                        <img src="images/kuntosalisymboli.png"width="80" alt="siniset käsipainot"/> 
                         <p>+</p> 
-                        <img src="images/ryhmaliikuntasymboli.png"width="50" alt="kolme sinistä henkilöhahmoa vierekkäin"/> 
+                        <img src="images/ryhmaliikuntasymboli.png"width="80" alt="kolme sinistä henkilöhahmoa vierekkäin"/> 
                         <p>+</p> 
-                        <img src="images/rentoutumissymboli.png"width="50" alt="Sininen joogaava hahmo"/> 
+                        <img src="images/rentoutumissymboli.png"width="80" alt="Sininen joogaava hahmo"/> 
                     </div>
 
                     <div class="teksti">
@@ -133,20 +133,19 @@
                         <p>118,90 e/kk</p>
                     </div>
                 </div>     
-
-                <p>Opiskelijat, eläkeläiset ja varusmiehet saavat 15 % alennusta.</p>
-            
             </section>
+                <p class="alennusryhmat">Opiskelijat, eläkeläiset ja varusmiehet saavat 15 % alennusta.</p>
+        
             </div>
             <section class="tutustumismainos">
                 <h2>Tutustumiskäynti</h2>
                 <p>Haluatko kokeilla palveluamme ennen ostopäätöksen tekoa? Tarjoamme yhden päivän tutustumiskäynnin ilmaiseksi. Täytäthän yhteydenottolomakkeen, niin olemme sinuun yhteydessä!</p>
             </section>
 
-            <section class="lomakeosio">
+            <section class="lomakealue">
                 <h2>Yhteydenottolomake</h2>
                 <p>Haluatko tutustumiskäynnille vai löysitkö jo itsellesi sopivan jäsenyyden? Haluatko antaa palautetta? Kerro nimesi ja sähköpostiosoitteesi, niin otamme yhteyttä sinuun!</p>
-                
+                <br>
                 <form class="jasenyyssivulomake">
                     <label for="name"> Nimesi </label>
                     <input type="text" id="name" name="name" placeholder="Nimesi"><br>
