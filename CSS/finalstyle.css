@@ -1,6 +1,245 @@
+/* KOKO SIVU */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* HEADER */
 
+.header,
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.navigaatiomenu {
+    display: flex;
+    justify-content: center; 
+    margin-top: auto;
+    background-color: #444;
+    padding: 10px;
+    gap: 60px  ;
+    
+}
+
+.navigaatiomenu a,
+.navigaatiomenu a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.navigaatiomenu a:hover,
+.navigaatiomenu a:focus {
+    background: #333;
+    color: white;
+    cursor: pointer;
+}
+
+.navigaatiomenu a {
+    display: block;
+}
+
+.navigaatiomenu a {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navigaatiomenu a:hover {
+    padding-left: 0rem; 
+    letter-spacing: 2px;
+}
+
 /* LANDING PAGE*/
+
+main {
+  display: grid;
+  grid-template-areas:
+    "banner"
+    "maincontent" 
+    "etusivukortit"
+    "arvolupaus";
+    row-gap: 2rem; 
+    column-gap: 1rem;
+    padding: 2rem; 
+    max-width: 1400px;
+    margin: auto;
+    background-color: whitesmoke;
+    
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+.maincontent {
+    grid-area: maincontent;
+    display: flex;
+    justify-content: left; 
+    flex-direction: row;
+    margin-top: 0px;
+    padding: 15px;
+    gap: 100px  ;
+    font-size: 25px;
+}
+
+.etusivukortit {
+    grid-area: etusivukortit;
+    display: flex;
+    gap: 3rem 3rem;
+}
+
+.arvolupaus {
+    grid-area: arvolupaus;
+    display: flex;
+    justify-content: left; 
+    flex-direction: row;
+    margin-top: 0px;
+    padding: 15px;
+    gap: 100px  ;
+    font-size: 25px;
+}
+
+
+.Maincontent {
+    display: flex;
+    justify-content: left; 
+    flex-direction: row;
+    margin-top: 0px;
+    padding: 15px;
+    gap: 100px  ;
+    font-size: 25px;
+    margin-left: 10%;
+    padding-right: 25%;
+   
+
+}
+
+.salikuva {
+    grid-area: salikuva;
+    display: flex;
+    justify-content: right; 
+    padding: 15px;
+    gap: 60px  ;
+    position: relative;
+    top: 0px;
+    
+}
+
+.yhteystiedot {
+    display: flex;
+    justify-content: center; 
+    margin-top: 0px;
+    background-color: #444;
+    padding: 15px;
+    gap: 60px  ;
+}
+
+.tekstiosio {
+    justify-content: left; 
+    margin-top: 0px;
+    padding: 15px;
+    gap: 10px;
+    font-size: 25px;
+    text-align: center
+}
+.card1, .card2, .card3, .card4 {
+  display: flex;
+  flex-direction: column;
+  width: 300px; 
+  height: 450px; 
+  border-radius: 15px;
+  overflow: hidden; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  margin-top: 30px;
+  position: relative;
+}
+
+.text-overlay1 {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 300px;
+  padding: 20px;
+  background: rgb(11, 159, 196); 
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.text-overlay2 {
+  position : absolute;
+  top: 0;
+  left: 0%;
+  width: 300px;
+  padding: 20px;
+  background: rgb(11, 159, 196); 
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 15px 15px 0px 0px;
+}
+
+
+.text-overlay3 {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 300px;
+  padding: 20px;
+  background: rgb(11, 159, 196); 
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.text-overlay4 {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 300px;
+  padding: 20px;
+  background: rgb(11, 159, 196); 
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.card-image1, .card-image2, .card-image3, .card-image4 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
+}
+
+.etusivukortit {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    margin-left: 0 auto;
+
+}
+
+.lomakeosio {  
+  display: flex;
+  width: 600px; 
+  height: 450px; 
+  border-radius: 15px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  align-items: center;
+  background-color: rgb(11, 159, 196);
+  margin-left: 35%;
+}
 
 /* ABOUTUS */
 
