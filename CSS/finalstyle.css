@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: whitesmoke;
+}
+
 /* HEADER */
 
 .header,
@@ -71,10 +75,6 @@ main {
     
 }
 
-body {
-    background-color: whitesmoke;
-}
-
 .maincontent {
     grid-area: maincontent;
     display: flex;
@@ -114,8 +114,6 @@ body {
     font-size: 25px;
     margin-left: 10%;
     padding-right: 25%;
-   
-
 }
 
 .salikuva {
@@ -229,19 +227,97 @@ body {
 
 }
 
-.lomakeosio {  
-  display: flex;
-  width: 600px; 
-  height: 450px; 
-  border-radius: 15px;
-  margin-bottom: 30px;
-  margin-top: 30px;
-  align-items: center;
-  background-color: rgb(11, 159, 196);
-  margin-left: 35%;
-}
+
 
 /* ABOUTUS */
+
+.Aboutus_main {
+  display: grid;
+  grid-template-areas:
+    "aboutus"
+    "salikuva"
+    "location"
+    "maps"
+    "historia"
+    ;
+  grid-template-rows: row;
+  row-gap: 5rem;
+  column-gap: 5rem;
+  padding: 5rem;
+}
+
+.Aboutus {
+    grid-area: aboutus;
+     display: flex;
+    justify-content: left; 
+    margin-top: 0px;
+    padding: 15px;
+    gap: 10px;
+    font-size: 25px;
+    padding-left: 5%;
+    padding-right: 0%;
+    text-align: center;
+}
+   
+
+.salikuva {
+    grid-area: salikuva;
+    display: flex;
+    justify-content: right; 
+    padding: 15px;
+    gap: 60px  ;
+    position: relative;
+    top: 0px;
+    
+}
+
+
+.tekstiosio, .tekstiosio2, .tekstiosio3 {
+    justify-content: left; 
+    margin-top: 0px;
+    padding: 15px;
+    gap: 10px;
+    font-size: 25px;
+  
+    text-align: center;
+    background-color: #44444400;
+}
+
+.location {
+    grid-area: location;
+     display: flex;
+    justify-content: left; 
+    margin-top: 0px;
+    padding: 15px;
+    gap: 10px;
+    font-size: 25px;
+    padding-left: 5%;
+    padding-right: 0%;
+    text-align: center;
+}
+
+.maps {
+   grid-area: maps;
+    display: flex;
+    justify-content: right; 
+    padding: 15px;
+    gap: 60px  ;
+    position: relative;
+    top: 0px;
+}
+
+.historia {
+    grid-area: historia;
+    display: flex;
+    justify-content: left; 
+    margin-top: 0px;
+    padding: 15px;
+    gap: 10px;
+    font-size: 25px;
+    padding-left: 5%;
+    padding-right: 0%;
+    text-align: center;
+}
 
 /* CONTACT */
 
