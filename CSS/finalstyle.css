@@ -90,13 +90,6 @@ main {
     font-size: 25px;
 }
 
-.tekstiosio {
-    width: 50%;
-}
-
-.arvolupaus {
-    text-align: center;
-}
 
 .etusivukortit {
     grid-area: etusivukortit;
