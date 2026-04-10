@@ -11,7 +11,7 @@ html, body {
     /*margin: 0;*/
     background-color: whitesmoke;
     font-family: sans-serif; 
-    font-size: 25px;   /* Tänne voisi merkata fontit. Varmaan käytetään kaikkialla samaa fonttia? */
+       /* Tänne voisi merkata fontit. Varmaan käytetään kaikkialla samaa fonttia? */ /* Vältetään globaalia fonttikokoa, mielummin määritellään case to case pohjalla*/
 }
 
 /* HEADER */
@@ -251,7 +251,7 @@ main {
 
 .Aboutus {
     grid-area: aboutus;
-     display: flex;
+    display: flex;
     justify-content: left; 
     margin-top: 0px;
     padding: 15px;
@@ -397,7 +397,7 @@ main {
 
 /* PALVELUT */
 
-img {
+/* Globaali nimittäjä kaikille kuvile sekottaa kaikki sivut näköjään. Muutin tän käyttämään eri luokkaa*/ .kuvakollaasi {
     max-width: 100%;
     height: auto;
 }
