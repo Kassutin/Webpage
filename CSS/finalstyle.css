@@ -108,7 +108,7 @@ main {
     font-size: 25px;
 }
 
-
+/* Onko tämä Maincontent jossain käytössä, vai onko vain jäänyt tänne? */
 .Maincontent {
     display: flex;
     justify-content: left; 
@@ -147,7 +147,7 @@ main {
     padding: 15px;
     gap: 10px;
     font-size: 25px;
-    text-align: center
+    text-align: center;
 }
 .card1, .card2, .card3, .card4 {
   display: flex;
@@ -168,7 +168,7 @@ main {
   left: 0%;
   width: 300px;
   padding: 20px;
-  background: rgb(11, 159, 196); 
+  background: #2929FF; 
   color: white;
   text-align: center;
   font-size: 18px;
@@ -181,7 +181,7 @@ main {
   left: 0%;
   width: 300px;
   padding: 20px;
-  background: rgb(11, 159, 196); 
+  background: #2929FF; 
   color: white;
   text-align: center;
   font-size: 18px;
@@ -195,7 +195,7 @@ main {
   left: 0%;
   width: 300px;
   padding: 20px;
-  background: rgb(11, 159, 196); 
+  background: #2929FF; 
   color: white;
   text-align: center;
   font-size: 18px;
@@ -208,7 +208,7 @@ main {
   left: 0px;
   width: 300px;
   padding: 20px;
-  background: rgb(11, 159, 196); 
+  background: #2929FF; 
   color: white;
   text-align: center;
   font-size: 18px;
@@ -393,14 +393,31 @@ main {
     background-color: white;
     margin: 0 auto;
     box-sizing: border-box;
-    padding: 15px;
+    
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
+    border-radius: 15px;
     vertical-align: top;
     display: inline-block;
     text-align: left;
     font-size: 25px;
 
+}
+
+.lomakeotsikko {
+    background-color: #2929FF;
+    color: white;
+    height: 100px;
+    line-height: 1;
+    padding:20px;
+    width: 100%;
+    box-sizing: border-box;
+    align-self: stretch;
+    text-align: left;
+    border-radius: 15px 15px 0 0;
+}
+
+.lomake {
+    padding: 20px;
 }
 
 input, select, textarea, button {
@@ -416,7 +433,7 @@ button {
 
 /* PALVELUT */
 
-/* Globaali nimittäjä kaikille kuvile sekottaa kaikki sivut näköjään. Muutin tän käyttämään eri luokkaa*/ .kuvakollaasi {
+.kuvakollaasi {
     max-width: 100%;
     height: auto;
 }
