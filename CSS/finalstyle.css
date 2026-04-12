@@ -63,38 +63,21 @@ html, body {
 
 /* LANDING PAGE*/
 
-main {
-  display: grid;
-  grid-template-areas:
-    "banner"
-    "maincontent" 
-    "etusivukortit"
-    "arvolupaus";
-    row-gap: 2rem; 
-    column-gap: 1rem;
-    padding: 2rem; 
-    max-width: 1400px;
-    margin: auto;
-    background-color: whitesmoke;
-    
+.etusivumain {
+    min-width: 0;
 }
 
-.maincontent {
-    grid-area: maincontent;
-    display: flex;
-    justify-content: left; 
-    flex-direction: row;
-    margin-top: 0px;
-    padding: 15px;
-    gap: 100px;
-    font-size: 25px;
+.salikuva {
+    display: block;
+    width: 100%;
+    max-width: 100%;
 }
 
-
-.etusivukortit {
-    grid-area: etusivukortit;
-    display: flex;
-    gap: 3rem 3rem;
+.salikuva img {
+    height: auto;
+    display: block;
+    width: 100%;
+    max-width: 100%;
 }
 
 .arvolupaus {
@@ -106,30 +89,6 @@ main {
     padding: 15px;
     gap: 100px  ;
     font-size: 25px;
-}
-
-/* Onko tämä Maincontent jossain käytössä, vai onko vain jäänyt tänne? */
-.Maincontent {
-    display: flex;
-    justify-content: left; 
-    flex-direction: row;
-    margin-top: 0px;
-    padding: 15px;
-    gap: 100px  ;
-    font-size: 25px;
-    margin-left: 10%;
-    padding-right: 25%;
-}
-
-.salikuva {
-    grid-area: salikuva;
-    display: flex;
-    justify-content: right; 
-    padding: 15px;
-    gap: 60px  ;
-    position: relative;
-    top: 0px;
-    
 }
 
 .yhteystiedot {
@@ -149,6 +108,25 @@ main {
     font-size: 25px;
     text-align: center;
 }
+
+/*kortit alkaa */ 
+
+.etusivukortit {
+    grid-area: etusivukortit;
+    display: flex;
+    gap: 3rem 3rem;
+}
+
+.etusivukortit {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    margin-left: 0 auto;
+
+}
+
 .card1, .card2, .card3, .card4 {
   display: flex;
   flex-direction: column;
@@ -222,13 +200,41 @@ main {
   display: block;
 }
 
-.etusivukortit {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
-    margin-left: 0 auto;
+/*kortit loppuu */
+
+@media (min-width: 550px) {
+    main {
+    display: grid;
+    grid-template-areas:
+        "banner"
+        "maincontent" 
+        "etusivukortit"
+        "arvolupaus";
+        row-gap: 2rem; 
+        column-gap: 1rem;
+        padding: 2rem; 
+        max-width: 1400px;
+        margin: auto;
+        background-color: whitesmoke;
+        
+    }
+
+    .maincontent {
+        grid-area: maincontent;
+        display: flex;
+        justify-content: left; 
+        flex-direction: row;
+        margin-top: 0px;
+        padding: 15px;
+        gap: 100px;
+        font-size: 25px;
+    }
+
+    .salikuva {
+    display: block;
+    width: auto;
+    }
+
 
 }
 
@@ -384,7 +390,7 @@ main {
     text-align: center;
 }
 
-.teksti .hinta .otsikko {
+.teksti, .hinta, .otsikko {
     text-align: center;
     padding: 10px;
 }
@@ -430,7 +436,13 @@ main {
     padding: 20px;
 }
 
+.lomakeotsikko {
+    text-align: center;
+    font-size: clamp(10px, 5vw, 30px);
+    }
+
 input, select, textarea, button {
+    text-align: left;
     font-size: 25px;
     margin: 5px, auto;
     width: 90%;
@@ -513,7 +525,7 @@ table {
 table th, table td {
     border: 2px solid #0c92c3;
     text-align: center;
-    font-size: 10px;
+    font-size: 8px;
     padding-top: 10px;
     padding-bottom: 10px;
 
