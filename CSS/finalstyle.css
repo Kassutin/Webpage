@@ -333,10 +333,19 @@ main {
 
 .jasenyydet {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+@media (min-width: 550px) {
+.jasenyydet {
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+}
 }
 
 .jasenyyskortti {
@@ -354,6 +363,7 @@ main {
     font-size: 18px;
 }
 
+
 .otsikko {
     background-color: #2929FF;
     color: white;
@@ -367,13 +377,14 @@ main {
     border-radius: 10px 10px 0 0;
 }
 
+
 .korttiotsikko {
     font-size: 25px;
     font-weight: bold;
+    text-align: center;
 }
 
 .teksti .hinta .otsikko {
-    width: 100%;
     text-align: center;
     padding: 10px;
 }
@@ -393,14 +404,13 @@ main {
     background-color: white;
     margin: 0 auto;
     box-sizing: border-box;
-    
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     border-radius: 15px;
     vertical-align: top;
     display: inline-block;
-    text-align: left;
+    text-align: center;
     font-size: 25px;
-
+    width: 90%;
 }
 
 .lomakeotsikko {
@@ -412,7 +422,7 @@ main {
     width: 100%;
     box-sizing: border-box;
     align-self: stretch;
-    text-align: left;
+    text-align: center;
     border-radius: 15px 15px 0 0;
 }
 
@@ -422,52 +432,72 @@ main {
 
 input, select, textarea, button {
     font-size: 25px;
-    margin: 5px;
-
+    margin: 5px, auto;
+    width: 90%;
 }
 
 button {
     padding: 10px;
 }
 
+@media (min-width: 550px) {
+    .jasenyyssivulomake {
+        background-color: white;
+        margin: 0 auto;
+        box-sizing: border-box;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+        vertical-align: top;
+        display: inline-block;
+        text-align: left;
+        font-size: 25px;
+        width: auto;
+    }
+
+    .lomakeotsikko {
+        text-align: left;
+    }
+
+    input, select, textarea, button {
+    font-size: 25px;
+    margin: 5px;
+    width: auto;
+    }
+} 
+
 
 /* PALVELUT */
 
-.kuvakollaasi {
-    max-width: 100%;
-    height: auto;
+.palvelut_main *,
+.palvelut_intro *,
+.palvelugrid * 
+table * {
+    min-width: 0;
 }
 
 .palvelut_main {
-    display:grid;
-    grid-auto-flow: row;
-    grid-template-areas: 
-    "palvelut_intro"
-    "palvelugrid";
-    box-sizing: border-box;
-    row-gap: 2rem; 
-    column-gap: 1rem;
-    padding: 2rem; 
-    max-width: 100%;
-    margin: auto;
-    background-color: whitesmoke; 
-}
-
-.palvelut_intro {
-    grid-area: palvelut_intro;
     text-align: center;
-    padding: 2rem;
+    align-items: center;
 }
 
-.palvelugrid {
-    grid-area: palvelugrid;
-    display: grid;
-    grid-auto-flow: row;
+.palveluesittely, 
+.ryhmaliikuntakalenteri {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.kuvakollaasi {
+    align-items: center;
+    display: block;
+    width: 100%;
     max-width: 100%;
-    overflow: hidden;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    row-gap: 1rem;
-    column-gap: 1rem;
+}
+
+.kuvakollaasi img {
+    height: auto;
+    display: block;
+    max-width: 100%;
+    align-items: center;
 }
 
 table {
@@ -475,17 +505,86 @@ table {
     border-collapse: collapse;
     border: 2px solid #0c92c3;
     font-size: 12px;
+    align-items: center;
+    margin: 0;
+    table-layout: fixed;
 }
 
 table th, table td {
     border: 2px solid #0c92c3;
     text-align: center;
-    white-space: normal;
+    font-size: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
 }
 
 table.wrapper {
     overflow-x: auto;
+    width: 100%;
 }
 
+
+@media (min-width: 550px) {
+    .palvelut_main {
+        display:grid;
+        grid-auto-flow: row;
+        grid-template-areas: 
+        "palvelut_intro"
+        "palvelugrid";
+        box-sizing: border-box;
+        row-gap: 2rem; 
+        column-gap: 1rem;
+        padding: 2rem; 
+        margin: auto;
+        background-color: whitesmoke; 
+        text-align: left;
+    }
+
+    .palvelut_intro {
+        grid-area: palvelut_intro;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .palvelugrid {
+        grid-area: palvelugrid;
+        display: grid;
+        grid-auto-flow: row;
+        overflow: hidden;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: 1rem;
+        column-gap: 1rem;
+        text-align: left;
+        align-items: left;
+    }
+
+    .palveluesittely {
+        text-align: left;
+    }
+
+    .kuvakollaasi {
+    height: auto;
+    display: block;
+    }
+
+    table { 
+        width: 100%; 
+        border-collapse: collapse; 
+        border: 2px solid #0c92c3; 
+
+    } 
+    
+    table th, table td { 
+        border: 2px solid #0c92c3; 
+        text-align: center; 
+        white-space: normal; 
+        font-size: 12px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    } 
+    table.wrapper { 
+        overflow-x: auto; }
+}
 
 /* FOOTER */
