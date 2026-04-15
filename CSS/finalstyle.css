@@ -258,92 +258,135 @@ html, body {
 
 /* ABOUTUS */
 
+
 .Aboutus_main {
-  display: grid;
-  grid-template-areas:
-    "aboutus"
-    "salikuva"
-    "location"
-    "maps"
-    "historia"
-    ;
-  grid-template-rows: row;
-  row-gap: 5rem;
-  column-gap: 5rem;
-  padding: 5rem;
-}
-
-.Aboutus {
-    grid-area: aboutus;
-    display: flex;
-    justify-content: left; 
-    margin-top: 0px;
-    padding: 15px;
-    gap: 10px;
-    font-size: 25px;
-    padding-left: 5%;
-    padding-right: 0%;
     text-align: center;
-}
-   
-
-.salikuva {
-    grid-area: salikuva;
-    display: flex;
-    justify-content: right; 
-    padding: 15px;
-    gap: 60px  ;
-    position: relative;
-    top: 0px;
+    width: 100%;
+    max-width: 100%;
     
 }
 
-
-.tekstiosio, .tekstiosio2, .tekstiosio3 {
-    justify-content: left; 
-    margin-top: 0px;
-    padding: 15px;
-    gap: 10px;
-    font-size: 25px;
-  
-    text-align: center;
-    background-color: #44444400;
+.Aboutus {
+    width: 100%;
+    max-width: 100%;
+    
 }
 
-.location {
-    grid-area: location;
-     display: flex;
-    justify-content: left; 
-    margin-top: 0px;
-    padding: 15px;
-    gap: 10px;
-    font-size: 25px;
-    padding-left: 5%;
-    padding-right: 0%;
-    text-align: center;
-}
-
-.maps {
-   grid-area: maps;
-    display: flex;
-    justify-content: right; 
-    padding: 15px;
-    gap: 60px  ;
-    position: relative;
-    top: 0px;
-}
-
+.Aboutus,
+.location,
 .historia {
-    grid-area: historia;
-    display: flex;
-    justify-content: left; 
-    margin-top: 0px;
-    padding: 15px;
-    gap: 10px;
-    font-size: 25px;
-    padding-left: 5%;
-    padding-right: 0%;
-    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.aboutus_img,
+.maps, 
+.historiakuva {
+    align-items: center;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding-top: 25px;
+}
+
+@media (max-width: 550px) {
+    .aboutus_img img,
+    .historiakuva img, 
+    .maps iframe {
+        height: auto;
+        display: block;
+        align-items: center;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 550px) {
+    .Aboutus_main {
+    display: grid;
+    grid-template-areas:
+        "aboutus"
+        "salikuva"
+        "location"
+        "maps"
+        "historia"
+        ;
+    grid-template-rows: row;
+    row-gap: 5rem;
+    column-gap: 5rem;
+    padding: 5rem;
+    }
+
+    .Aboutus {
+        grid-area: aboutus;
+        display: flex;
+        justify-content: left; 
+        margin-top: 0px;
+        padding: 15px;
+        gap: 10px;
+        font-size: 25px;
+        padding-left: 5%;
+        padding-right: 0%;
+        text-align: center;
+    }
+    
+
+    .salikuva {
+        grid-area: salikuva;
+        display: flex;
+        justify-content: right; 
+        padding: 15px;
+        gap: 60px  ;
+        position: relative;
+        top: 0px;
+        
+    }
+
+    .tekstiosio, .tekstiosio2, .tekstiosio3 {
+        justify-content: left; 
+        margin-top: 0px;
+        padding: 15px;
+        gap: 10px;
+        font-size: 25px;
+    
+        text-align: center;
+        background-color: #44444400;
+    }
+
+    .location {
+        grid-area: location;
+        display: flex;
+        justify-content: left; 
+        margin-top: 0px;
+        padding: 15px;
+        gap: 10px;
+        font-size: 25px;
+        padding-left: 5%;
+        padding-right: 0%;
+        text-align: center;
+    }
+
+    .maps {
+    grid-area: maps;
+        display: flex;
+        justify-content: right; 
+        padding: 15px;
+        gap: 60px  ;
+        position: relative;
+        top: 0px;
+    }
+
+    .historia {
+        grid-area: historia;
+        display: flex;
+        justify-content: left; 
+        margin-top: 0px;
+        padding: 15px;
+        gap: 10px;
+        font-size: 25px;
+        padding-left: 5%;
+        padding-right: 0%;
+        text-align: center;
+    }
 }
 
 /* CONTACT */
