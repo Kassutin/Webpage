@@ -24,30 +24,6 @@ html, body {
     text-align: center;
     margin-bottom: 0px;
 }
-.footer{
-    background-color: #333;
-    color: white;
-    padding: 15px;
-    justify-content: center;
-}
-
-.footerlogo{
-    display: block;
-}
-
-.yhteystiedot {
-    display: flex;
-    justify-content: center; 
-    background-color: #444;
-    padding: 40px;
-    gap: 55px;
-    text-align: center;    
-}    
-
-.somet a,.somet a:visited {
-    text-decoration: none;
-    color: white;
-}
 
 .navigaatiomenu {
     display: flex;
@@ -672,4 +648,44 @@ table.wrapper {
 }
 
 /* FOOTER */
+.footer{
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    justify-content: center;
+}
 
+.footerlogo{
+    display: block;
+}
+
+.yhteystiedot {
+    background-color: #444;
+}
+
+.somet a,.somet a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.yhteystiedot p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+} 
+
+.footerotsikko {
+    font-weight: bold;
+}
+
+.yhteystiedot {
+    justify-content: center; 
+    padding: 40px;
+    gap: 55px;
+    text-align: center;    
+}  
+
+@media (min-width: 550px) {  
+    .yhteystiedot {
+        display: flex;
+    }
+}
