@@ -348,6 +348,11 @@ html, body {
 
 /* CONTACT */
 
+.Contact, .lomakeosio {
+    justify-content: center;
+    text-align: center;
+}
+
 /* JÄSENYYS */
 
 .jasenyys_main {
