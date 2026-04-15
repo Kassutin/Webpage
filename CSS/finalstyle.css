@@ -388,11 +388,10 @@ html, body {
 
 
 .otsikko {
-    background-color: #1066d7;
+    background-color: #2929FF;
     color: white;
     height: 100px;
     line-height: 1;
-    padding-top:20px;
     width: 100%;
     box-sizing: border-box;
     align-self: stretch;
@@ -402,6 +401,7 @@ html, body {
 
 
 .korttiotsikko {
+    padding-top: 25px;
     font-size: 25px;
     font-weight: bold;
     text-align: center;
@@ -410,6 +410,13 @@ html, body {
 .teksti, .hinta, .otsikko {
     text-align: center;
     padding: 10px;
+}
+
+.hinta {
+    font-size: 30px;
+    font-weight: bold;
+    color: #2929FF;
+    padding-bottom: 25px;
 }
 
 .ikonit {
