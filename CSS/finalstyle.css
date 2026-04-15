@@ -16,42 +16,37 @@ html, body {
 
 /* HEADER */
 
-@media (max-width: 768px) {
-    
-    .header, 
-    .footer {
-        padding: 12px 5px;
-        font-size: 0.85rem;
-    }
 
-    .navigaatiomenu {
-        display: flex;
-        flex-direction: row;      
-        justify-content: space-around;
-        gap: 5px;                
-        padding: 5px 5px;
-        overflow-x: auto;        
-        white-space: nowrap;      
-    }
-
-    .navigaatiomenu a {
-        font-size: 0.8rem;        
-        padding: 5px 8px;         
-
-   
-    .navigaatiomenu a:hover {
-        letter-spacing: 0.5px;    
-    }
-    }
-}
-
-.header,
-.footer {
+.header{
     background-color: #333;
     color: white;
     padding: 15px;
     text-align: center;
     margin-bottom: 0px;
+}
+.footer{
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    justify-content: center;
+}
+
+.footerlogo{
+    display: block;
+}
+
+.yhteystiedot {
+    display: flex;
+    justify-content: center; 
+    background-color: #444;
+    padding: 40px;
+    gap: 55px;
+    text-align: center;    
+}    
+
+.somet a,.somet a:visited {
+    text-decoration: none;
+    color: white;
 }
 
 .navigaatiomenu {
@@ -96,17 +91,15 @@ html, body {
     min-width: 0;
 }
 
-.salikuva {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-}
 
 .salikuva img {
-    height: auto;
-    display: block;
-    width: 100%;
-    max-width: 100%;
+
+    height: 120%;
+    width: 120%;      /* Maintains aspect ratio */
+    object-fit: contain;
+    align-self: center; /* Centers it vertically within the flex container */
+    transition: transform 0.3s ease; /* Smooth animation for later */
+    justify-content: center;
 }
 
 .arvolupaus {
@@ -120,22 +113,19 @@ html, body {
     font-size: 25px;
 }
 
-.yhteystiedot {
-    display: flex;
-    justify-content: center; 
-    margin-top: 0px;
-    background-color: #444;
-    padding: 15px;
-    gap: 60px  ;
+.maincontent {
+
+    margin-bottom: 30px;
 }
 
 .tekstiosio {
     justify-content: left; 
-    margin-top: 0px;
+    margin-top: 20px;
     padding: 15px;
     gap: 10px;
     font-size: 25px;
     text-align: center;
+   
 }
 
 /*kortit alkaa */ 
@@ -175,7 +165,7 @@ html, body {
   left: 0%;
   width: 300px;
   padding: 20px;
-  background: #2929FF; 
+  background: #1066d7; 
   color: white;
   text-align: center;
   font-size: 18px;
@@ -188,7 +178,7 @@ html, body {
   left: 0%;
   width: 300px;
   padding: 20px;
-  background: #2929FF; 
+  background: #1066d7; 
   color: white;
   text-align: center;
   font-size: 18px;
@@ -202,7 +192,7 @@ html, body {
   left: 0%;
   width: 300px;
   padding: 20px;
-  background: #2929FF; 
+  background: #1066d7; 
   color: white;
   text-align: center;
   font-size: 18px;
@@ -215,7 +205,7 @@ html, body {
   left: 0px;
   width: 300px;
   padding: 20px;
-  background: #2929FF; 
+  background: #1066d7; 
   color: white;
   text-align: center;
   font-size: 18px;
@@ -261,9 +251,7 @@ html, body {
 
     .salikuva {
     display: block;
-    width: auto;
     }
-
 
 }
 
@@ -400,7 +388,7 @@ html, body {
 
 
 .otsikko {
-    background-color: #2929FF;
+    background-color: #1066d7;
     color: white;
     height: 100px;
     line-height: 1;
@@ -449,7 +437,7 @@ html, body {
 }
 
 .lomakeotsikko {
-    background-color: #2929FF;
+    background-color: #1066d7;
     color: white;
     height: 100px;
     line-height: 1;
