@@ -412,7 +412,7 @@ html, body {
 
 
 .otsikko {
-    background-color: #2929FF;
+    background-color: #0c518d;
     color: white;
     height: 100px;
     line-height: 1;
@@ -439,7 +439,7 @@ html, body {
 .hinta {
     font-size: 30px;
     font-weight: bold;
-    color: #2929FF;
+    color: #0c518d;
     padding-bottom: 25px;
 }
 
@@ -468,7 +468,7 @@ html, body {
 }
 
 .lomakeotsikko {
-    background-color: #1066d7;
+    background-color:#0c518d;
     color: white;
     height: 100px;
     line-height: 1;
@@ -563,7 +563,7 @@ table * {
 table {
     width: 100%;
     border-collapse: collapse;
-    border: 2px solid #0c92c3;
+    border: 2px solid #0c518d;
     font-size: 12px;
     align-items: center;
     margin: 0;
@@ -571,7 +571,7 @@ table {
 }
 
 table th, table td {
-    border: 2px solid #0c92c3;
+    border: 2px solid #0c518d;
     text-align: center;
     font-size: 8px;
     padding-top: 10px;
@@ -631,12 +631,12 @@ table.wrapper {
     table { 
         width: 100%; 
         border-collapse: collapse; 
-        border: 2px solid #0c92c3; 
+        border: 2px solid #0c518d; 
 
     } 
     
     table th, table td { 
-        border: 2px solid #0c92c3; 
+        border: 2px solid #0c518d; 
         text-align: center; 
         white-space: normal; 
         font-size: 12px;
