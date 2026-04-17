@@ -16,7 +16,6 @@ html, body {
 
 /* HEADER */
 
-
 .header{
     background-color: #333;
     color: white;
@@ -67,14 +66,12 @@ html, body {
     min-width: 0;
 }
 
-
 .salikuva img {
-
     height: 120%;
-    width: 120%;      /* Maintains aspect ratio */
+    width: 120%;      
     object-fit: contain;
-    align-self: center; /* Centers it vertically within the flex container */
-    transition: transform 0.3s ease; /* Smooth animation for later */
+    align-self: center; 
+    transition: transform 0.3s ease; 
     justify-content: center;
 }
 
@@ -154,7 +151,7 @@ html, body {
   left: 0%;
   width: 300px;
   padding: 20px;
-  background: #1066d7; 
+  background: #196691; 
   color: white;
   text-align: center;
   font-size: 18px;
@@ -168,7 +165,7 @@ html, body {
   left: 0%;
   width: 300px;
   padding: 20px;
-  background: #1066d7; 
+  background: #196691; 
   color: white;
   text-align: center;
   font-size: 18px;
@@ -181,7 +178,7 @@ html, body {
   left: 0px;
   width: 300px;
   padding: 20px;
-  background: #1066d7; 
+  background: #196691; 
   color: white;
   text-align: center;
   font-size: 18px;
@@ -231,9 +228,7 @@ html, body {
 
 }
 
-
 /* ABOUTUS */
-
 
 .Aboutus_main {
     text-align: center;
@@ -385,6 +380,7 @@ html, body {
     text-align: center;
     flex-wrap: wrap;
 }
+
 @media (min-width: 550px) {
 .jasenyydet {
     display: flex;
@@ -410,9 +406,14 @@ html, body {
     font-size: 18px;
 }
 
+.mainos {
+    height: 400px;
+    width: 800px;
+    border-radius: 15px 15px 15px 15px;
+}
 
 .otsikko {
-    background-color: #0c518d;
+    background-color: #196691;
     color: white;
     height: 100px;
     line-height: 1;
@@ -439,7 +440,7 @@ html, body {
 .hinta {
     font-size: 30px;
     font-weight: bold;
-    color: #0c518d;
+    color: #196691;
     padding-bottom: 25px;
 }
 
@@ -468,7 +469,7 @@ html, body {
 }
 
 .lomakeotsikko {
-    background-color:#0c518d;
+    background-color:#196691;
     color: white;
     height: 100px;
     line-height: 1;
@@ -525,7 +526,6 @@ button {
     }
 } 
 
-
 /* PALVELUT */
 
 .palvelut_main *,
@@ -563,7 +563,7 @@ table * {
 table {
     width: 100%;
     border-collapse: collapse;
-    border: 2px solid #0c518d;
+    border: 2px solid #196691;
     font-size: 12px;
     align-items: center;
     margin: 0;
@@ -571,7 +571,7 @@ table {
 }
 
 table th, table td {
-    border: 2px solid #0c518d;
+    border: 2px solid #196691;
     text-align: center;
     font-size: 8px;
     padding-top: 10px;
@@ -631,12 +631,12 @@ table.wrapper {
     table { 
         width: 100%; 
         border-collapse: collapse; 
-        border: 2px solid #0c518d; 
+        border: 2px solid #196691; 
 
     } 
     
     table th, table td { 
-        border: 2px solid #0c518d; 
+        border: 2px solid #196691; 
         text-align: center; 
         white-space: normal; 
         font-size: 12px;
