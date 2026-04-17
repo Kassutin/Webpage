@@ -12,207 +12,199 @@ html, body {
 /* Burgerimenun testi */
 
 
-@media (max-width: 550px) {
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    width: 100%;
-    max-width: 100%;
-}
-
-.navigaatiomenu {
-    padding: 0.25rem 0.5rem;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-
-    overflow-x: auto;
-}
-
-.menu-button {
-    background-color: transparent;
-    border: none;
-    width: 48px;
-    height: 48px;
-    display: block;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.menu-icon{
-    background-color: white;
-    width: 40px;
-    height: 5px;
-    border-radius: 5px;
-    position:absolute;
-    transition: all 0.5s;
-}
-
-.menu-icon::before{
-    background-color: white;
-    width: 40px;
-    height: 5px;
-    border-radius: 5px;
-    position:absolute;
-    transition: all 0.5s;
-}
-
-.menu-icon::after {
-    background-color: white;
-    width: 40px;
-    height: 5px;
-    border-radius: 5px;
-    position:absolute;
-    transition: all 0.5s;
-}
-
-.menu-icon::before,
-.menu-icon::after {
-    content: "";
-}
-
-.menu-icon::before {
-    transform: translate(-20px, -12px);
-}
-
-.menu-icon::after {
-    transform: translate(-20px, 12px);
-}
-
-nav ul {
-    list-style-type: none;
-    display: flex;
-    flex-flow: column nowrap;
-}
-
-nav li {
-    padding: 0.5rem;
-    border-top: 1px solid #444;
-    background-color: #333;
-}
-
-nav a {
-    display: block;
-    text-align: center;
-    width: 80%;
-    margin: auto;
-}
-
-nav a:any-link {
-    color: white;
-    text-decoration: none;
-    font-size: 25px;
-}
-
-/* menunapille animaatio */
-:is(header:hover, header:focus-within) nav {
-    display: block;
-}
-
-nav {
-    background-color: #333;
-    display: none;
-    transform-origin: top center;
-    animation: showMenu 0.5s ease-in-out forwards;
-}
-
-@keyframes showMenu {
-    0% {
-        transform: scaleY(0);
+@media (max-width: 999px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        width: 100%;
+        max-width: 100%;
     }
 
-    80% {
-        transform: scaleY(1.2);
+    .headerlogo {
+        width: 100%;
+        height: auto;
+        max-width: 400px;
     }
 
-    100% {
-        transform: scaleY(1);
+    .navigaatiomenu {
+        padding: 0.5rem 0.5rem;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+
     }
+
+    .menu-button {
+        background-color: transparent;
+        border: none;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        flex-shrink: 0;
+    }
+
+    .menu-icon,
+    .menu-icon::before,
+    .menu-icon::after {
+        background-color: white;
+        width: 100%;
+        height: 5px;
+        border-radius: 5px;
+        position: absolute;
+        transition: all 0.5s;
+    }
+
+    .menu-icon::before {
+        content: "";
+        transform: translate(-25px, -13px);
+    }
+
+    .menu-icon::after {
+        content: "";
+        transform: translate(-25px, 13px);
+    }
+
+    nav ul {
+        list-style-type: none;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    nav li {
+        padding: 0.5rem;
+        border-top: 1px solid #444;
+        background-color: #333;
+    }
+
+    nav a {
+        display: block;
+        text-align: center;
+        width: 80%;
+        margin: auto;
+    }
+
+    nav a:any-link {
+        color: white;
+        text-decoration: none;
+        font-size: 25px;
+    }
+
+    nav li.vaindesktop {
+        display: none;
+    }
+
+    /* menunapille animaatio */
+    :is(header:hover, header:focus-within) nav {
+        display: block;
+    }
+
+    nav {
+        background-color: #333;
+        display: none;
+        transform-origin: top center;
+        animation: showMenu 0.5s ease-in-out forwards;
+    }
+
+    @keyframes showMenu {
+        0% {
+            transform: scaleY(0);
+        }
+
+        80% {
+            transform: scaleY(1.2);
+        }
+
+        100% {
+            transform: scaleY(1);
+        }
+    }
+
+    nav a:hover,
+    nav a:focus {
+        transform: scale(1.2);
+        transform: all 0.3s;
+        background-color: #444;
+    }
+
 }
 
-nav a:hover,
-nav a:focus {
-    transform: scale(1.2);
-    transform: all 0.3s;
-    background-color: #444;
-}
-
-}
-
-@media (min-width:551px) {
+@media (min-width:1000px) {
     .menu-button, 
-    .headerlogo{
+    .headerlogo {
         display: none;
     }
     
     nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 60px;
-    margin: 0;
-    padding: 10px;
-    background-color: #444;
-}
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin: 0;
+        padding: 10px;
+        background-color: #444;
+    }
 
-nav li {
-    list-style: none;
-}
+    nav li {
+        list-style: none;
+    }
 
-nav a,
-nav a:visited {
-    text-decoration: none;
-    color: white;
-    display: block;
-    padding: 0.5rem 1rem;
-}
+    nav li.vaindesktop {
+        display: block;
+    }
 
-nav a:hover,
-nav a:focus {
-    background: #333;
-    cursor: pointer;
-    letter-spacing: 2px;
-}
-    .navigaatiomenu {
-    display: flex;
-    justify-content: center;
-    gap: 60px;
-    margin-top: auto;
-    background-color: #444;
-    padding: 10px;
-}
+    nav a,
+    nav a:visited {
+        text-decoration: none;
+        color: white;
+        display: block;
+        padding: 0.5rem 1rem;
+    }
 
-/* uusi pakollinen lisä */
-.navigaatiomenu li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
+    nav a:hover,
+    nav a:focus {
+        background: #333;
+        cursor: pointer;
+        letter-spacing: 2px;
+    }
+        .navigaatiomenu {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        margin-top: auto;
+        background-color: #444;
+        padding: 10px;
+    }
 
-/* linkit kuten ennen */
-.navigaatiomenu a,
-.navigaatiomenu a:visited {
-    text-decoration: none;
-    color: white;
-    display: block;
-    padding: 0.5rem 1rem;
-}
+    .navigaatiomenu li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
 
-/* hover */
-.navigaatiomenu a:hover,
-.navigaatiomenu a:focus {
-    background: #333;
-    color: white;
-    cursor: pointer;
-    letter-spacing: 2px;
-}
+    .navigaatiomenu a,
+    .navigaatiomenu a:visited {
+        text-decoration: none;
+        color: white;
+        display: block;
+        padding: 0.5rem 1rem;
+    }
 
-/* animaatio */
-.navigaatiomenu a {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
+    .navigaatiomenu a:hover,
+    .navigaatiomenu a:focus {
+        background: #333;
+        color: white;
+        cursor: pointer;
+        letter-spacing: 2px;
+    }
+
+    .navigaatiomenu a {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
 }
 
 
