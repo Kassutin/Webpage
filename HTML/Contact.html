@@ -2,6 +2,100 @@
  <html lang="fi">
     <head>
          <meta charset="UTF-8">
-         <title>Contact</title>
-         <link rel="stylesheet" href="">
+         <title>Ota yhteyttä</title>
+         <meta name="description" content="äikö jokin mietityttämään tai haluatko ottaa yhteyttä?
+                Ota rohkeasti yhteyttä meihin!">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="stylesheet" href="../CSS/finalstyle.css">
+         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
     </head>
+    <body>
+        <header class="ylapalkki">
+            <section class="navigaatiomenu">
+                <img src="images/nw-removebg-preview.png" alt="Logo headerissa" height="100px" class="headerlogo">
+                <button class="menu-button"alt="yläpalkin pudotusvalikko">
+                    <div class="menu-icon"alt="yläpalkin pudotusvalikko"></div>
+                </button>
+            </section>
+
+
+            <nav>
+                <ul>
+                    <li class="vaindesktop"><img src="images/nw-removebg-preview.png" alt="Logo headerissa" height="100px"></li>
+                    <li><a href="Landingpage.html">Etusivu</a></li>
+                    <li><a href="Aboutus.html">Meistä</a></li>
+                    <li><a href="Contact.html">Ota yhteyttä</a></li>
+                    <li><a href="jasenyys.html">Jäsenyys</a></li>
+                    <li><a href="palvelut.html">Palvelut</a></li>
+                </ul>
+            </nav>
+
+        </header>
+        <main>
+            <div class="tekstiosio">
+                <h1>Jäikö jokin mietityttämään tai haluatko ottaa yhteyttä?</h1>
+                <p>Ota rohkeasti yhteyttä meihin!</p>
+            </div>
+            
+            <section class="lomakeosio">
+                <h2>Yhteydenottolomake</h2> 
+                    
+                <form class="Contact">
+                    <label for="name"> Nimesi </label><br>
+                    <input type="text" id="name" name="name" placeholder="Nimesi"><br>
+                    <label for="email">Sähköpostiosoitteesi</label><br>
+                    <input type="email" id="email" placeholder="Sähköpostiosoitteesi"><br>
+                    <br>
+                    <label for="reason">Kuinka voimme palvella?</label><br>
+                    <select id="reason" name="reason"><br>
+                        <option value="jasenyys">Jäsenyys</option>
+                        <option value="tutustumiskaynti">Tutustumiskäynti</option>
+                        <option value="muu">Muu</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label for="text">Anna halutessasi lisätietoa tai palautetta. Ethän kirjoita tähän luottamuksellisia tietoja!</label>
+                    <br>
+                    <textarea id="text" name="text" rows="3" cols="40" placeholder="Kirjoita tähän"></textarea>
+                    <br>
+                    <button type="submit">Lähetä</button>
+                    <br>
+                </form>
+            </section>
+        </main>
+            <footer class="footer">
+            <nav class="footer_sisalto">
+                
+                <div class="footerlogo">
+                <img src="images/nw-removebg-preview.png" alt="Logo headerissa" height="100px">
+                </div>    
+
+                <div>
+                    <p class="footerotsikko">Aukioloajat</p>
+                    <p>Ma-Pe 05.00-24.00<br>
+                    La 07.00-23.00<br>
+                    Su 08.00-22.00</p>
+                </div>
+                
+                <div>
+                    <p class="footerotsikko">Yhteystiedot</p>
+                    <p> 040 123 4567<br>
+                    northwindgym@outlook.fi<br>
+                    Korsholmanpuistikko 1 65100 Vaasa
+                    </p>
+                </div>
+
+                <div class="somet">
+                    <p class="footerotsikko"> Seuraa meitä! </p>
+                    <p>    
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="footerlinkki">Instagram</a><br>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="footerlinkki">Facebook</a><br>
+                        <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" class="footerlinkki">Twitter</a><br>
+                    </p>    
+                </div> 
+            </nav>  
+        </footer>
+
+    </body>
+    
