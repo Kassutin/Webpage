@@ -1,0 +1,885 @@
+/* KOKO SIVU */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body { 
+    height: 100%;
+    /*margin: 0;*/
+    background-color: whitesmoke;
+    font-family: sans-serif; 
+       /* Tänne voisi merkata fontit. Varmaan käytetään kaikkialla samaa fonttia? */ /* Vältetään globaalia fonttikokoa, mielummin määritellään case to case pohjalla*/
+}
+
+
+
+/* HEADER */
+
+ 
+@media (max-width: 999px) {
+    .ylapalkki {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .headerlogo {
+        width: 100%;
+        height: auto;
+        max-width: 400px;
+    }
+
+    .navigaatiomenu {
+        padding: 1rem 5rem;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #333;
+
+    }
+
+    @media (max-width:700px) {
+        .navigaatiomenu {
+            flex-flow: row wrap;
+            justify-content: center;
+
+        }
+    }
+
+    .menu-button {
+        background-color: transparent;
+        border: none;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        flex-shrink: 0;
+        text-align: center;
+    }
+
+    .menu-icon,
+    .menu-icon::before,
+    .menu-icon::after {
+        background-color: white;
+        width: 100%;
+        height: 5px;
+        border-radius: 5px;
+        position: absolute;
+        transition: all 0.5s;
+    }
+
+    .menu-icon::before {
+        content: "";
+        transform: translate(-25px, -13px);
+    }
+
+    .menu-icon::after {
+        content: "";
+        transform: translate(-25px, 13px);
+    }
+
+    nav ul {
+        list-style-type: none;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    nav li {
+        padding: 0.5rem;
+        border-top: 1px solid #444;
+        background-color: #333;
+    }
+
+    nav a {
+        display: block;
+        text-align: center;
+        width: 80%;
+        margin: auto;
+    }
+
+    .ylapalkki nav a:any-link {
+        color: white;
+        text-decoration: none;
+        font-size: 25px;
+    }
+
+    nav li.vaindesktop {
+        display: none;
+    }
+
+    /* menunapille animaatio */
+    :is(header:hover, header:focus-within) nav {
+        display: block;
+    }
+    nav {
+        background-color: #333;
+        display: none;
+        transform-origin: top center;
+        animation: showMenu 0.5s ease-in-out forwards;
+    }
+
+    @keyframes showMenu {
+        0% {
+            transform: scaleY(0);
+        }
+
+        80% {
+            transform: scaleY(1.2);
+        }
+
+        100% {
+            transform: scaleY(1);
+        }
+    }
+
+    nav a:hover,
+    nav a:focus {
+        transform: scale(1.2);
+        transform: all 0.3s;
+        background-color: #444;
+    }
+}
+
+@media (min-width:1000px) {
+    .menu-button, 
+    .headerlogo {
+        display: none;
+    }
+    
+    nav ul {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        margin: 0;
+        padding: 10px;
+        background-color: #444;
+    }
+
+    nav li {
+        list-style: none;
+    }
+
+    nav li.vaindesktop {
+        display: block;
+    }
+
+    nav a,
+    nav a:visited {
+        text-decoration: none;
+        color: white;
+        display: block;
+        padding: 0.5rem 1rem;
+        font-size: 25px;
+    }
+
+    nav a:hover,
+    nav a:focus {
+        background: #333;
+        cursor: pointer;
+        letter-spacing: 2px;
+    }
+
+    .navigaatiomenu {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: auto;
+    background-color: #444;
+    padding: 10px;
+    }
+
+    .navigaatiomenu li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navigaatiomenu a,
+    .navigaatiomenu a:visited {
+        text-decoration: none;
+        color: white;
+        display: block;
+        padding: 0.5rem 1rem;
+    }
+
+    .navigaatiomenu a:hover,
+    .navigaatiomenu a:focus {
+        background: #333;
+        color: white;
+        cursor: pointer;
+        letter-spacing: 2px;
+    }
+
+    .navigaatiomenu a {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+}
+
+
+/* LANDING PAGE*/
+
+.etusivumain {
+    min-width: 0;
+}
+
+.salikuva img {
+    height: 120%;
+    width: 120%;      
+    object-fit: contain;
+    align-self: center; 
+    transition: transform 0.3s ease; 
+    justify-content: center;
+}
+
+.arvolupaus {
+    grid-area: arvolupaus;
+    display: flex;
+    justify-content: left; 
+    flex-direction: row;
+    margin-top: 0px;
+    padding: 15px;
+    gap: 100px  ;
+    font-size: 25px;
+}
+
+.maincontent {
+
+    margin-bottom: 30px;
+}
+
+.tekstiosio {
+    justify-content: left; 
+    margin-top: 20px;
+    padding: 15px;
+    gap: 10px;
+    font-size: 25px;
+    text-align: center;
+   
+}
+
+/*kortit alkaa */ 
+
+.etusivukortit {
+    grid-area: etusivukortit;
+    display: flex;
+    gap: 3rem 3rem;
+}
+
+.etusivukortit {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    margin-left: 0 auto;
+
+}
+
+.card1, .card2, .card3, .card4 {
+  display: flex;
+  flex-direction: column;
+  width: 300px; 
+  height: 450px; 
+  border-radius: 15px;
+  overflow: hidden; 
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  margin-top: 30px;
+  position: relative;
+}
+
+.text-overlay1 {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 300px;
+  padding: 20px;
+  background: #0c518d; 
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.text-overlay2 {
+  position : absolute;
+  top: 0;
+  left: 0%;
+  width: 300px;
+  padding: 20px;
+  background: #196691; 
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 15px 15px 0px 0px;
+}
+
+
+.text-overlay3 {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 300px;
+  padding: 20px;
+  background: #196691; 
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.text-overlay4 {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 300px;
+  padding: 20px;
+  background: #196691; 
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.card-image1, .card-image2, .card-image3, .card-image4 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
+}
+
+/*kortit loppuu */
+
+@media (min-width: 550px) {
+    .etusivu_main {
+        text-align: center;
+        display: grid;
+        grid-template-areas:
+            "banner"
+            "maincontent" 
+            "etusivukortit"
+            "arvolupaus";
+        row-gap: 2rem; 
+        column-gap: 1rem;
+        padding: 2rem; 
+        max-width: 100%;
+        margin: auto;
+        background-color: whitesmoke;
+    }
+
+    
+
+    .maincontent {
+        grid-area: maincontent;
+        margin-top: 0px;
+        padding: 15px;
+        gap: 100px;
+        font-size: 25px;
+    }
+
+    .salikuva {
+    display: block;
+    }
+
+}
+
+/* ABOUTUS */
+
+.Aboutus_main {
+    text-align: center;
+    width: 100%;
+    max-width: 100%;
+    
+}
+
+.Aboutus {
+    width: 100%;
+    max-width: 100%;
+    
+}
+
+.Aboutus,
+.location,
+.historia {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.aboutus_img,
+.maps, 
+.historiakuva {
+    align-items: center;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    padding-top: 25px;
+}
+
+@media (max-width: 550px) {
+    .aboutus_img img,
+    .historiakuva img, 
+    .maps iframe {
+        height: auto;
+        display: block;
+        align-items: center;
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 550px) {
+    .Aboutus_main {
+        display: grid;
+        grid-template-areas:
+            "aboutus"
+            "salikuva"
+            "location"
+            "maps"
+            "historia"
+            ;
+        grid-template-rows: row;
+        row-gap: 5rem;
+        column-gap: 5rem;
+        padding: 5rem;
+    }
+
+    .Aboutus {
+        grid-area: aboutus;
+        display: flex;
+        justify-content: left; 
+        margin-top: 0px;
+        padding: 15px;
+        gap: 10px;
+        font-size: 25px;
+        padding-left: 5%;
+        padding-right: 0%;
+        text-align: center;
+    }
+    
+
+    .salikuva {
+        grid-area: salikuva;
+        display: flex;
+        justify-content: right; 
+        padding: 15px;
+        gap: 60px  ;
+        position: relative;
+        top: 0px;
+        
+    }
+
+    .tekstiosio, .tekstiosio2, .tekstiosio3 {
+        justify-content: left; 
+        margin-top: 0px;
+        padding: 15px;
+        gap: 10px;
+        font-size: 25px;
+    
+        text-align: center;
+        background-color: #44444400;
+    }
+
+    .location {
+        grid-area: location;
+        display: flex;
+        justify-content: left; 
+        margin-top: 0px;
+        padding: 15px;
+        gap: 10px;
+        font-size: 25px;
+        padding-left: 5%;
+        padding-right: 0%;
+        text-align: center;
+    }
+
+    .maps {
+        grid-area: maps;
+        display: flex;
+        justify-content: right; 
+        padding: 15px;
+        gap: 60px  ;
+        position: relative;
+        top: 0px;
+    }
+
+    .historia {
+        grid-area: historia;
+        display: flex;
+        justify-content: left; 
+        margin-top: 0px;
+        padding: 15px;
+        gap: 10px;
+        font-size: 25px;
+        padding-left: 5%;
+        padding-right: 0%;
+        text-align: center;
+    }
+}
+
+/* CONTACT */
+
+.Contact, .lomakeosio {
+    justify-content: center;
+    text-align: center;
+}
+
+/* JÄSENYYS */
+
+.jasenyys_main {
+    text-align: center;
+}
+
+.jasenyydet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.tutustumismainos_desktop {
+    display: none;
+}
+
+.jasenyyskortti {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border-radius: 15px;
+    width: 300px; 
+    height: 450px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.otsikko {
+    background-color: #196691;
+    color: white;
+    height: 100px;
+    line-height: 1;
+    width: 100%;
+    box-sizing: border-box;
+    align-self: stretch;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.korttiotsikko {
+    padding-top: 25px;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.teksti, .hinta, .otsikko {
+    text-align: center;
+    padding: 10px;
+}
+
+.hinta {
+    font-size: 30px;
+    font-weight: bold;
+    color: #196691;
+    padding-bottom: 25px;
+}
+
+.ikonit {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+}
+
+.jasenyyssivulomake {
+    background-color: white;
+    margin: 0 auto;
+    box-sizing: border-box;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    font-size: 25px;
+    width: 90%;
+}
+
+.lomakeotsikko {
+    background-color:#196691;
+    color: white;
+    height: 100px;
+    line-height: 1;
+    padding:20px;
+    width: 100%;
+    box-sizing: border-box;
+    align-self: stretch;
+    text-align: center;
+    border-radius: 15px 15px 0 0;
+}
+
+.lomake {
+    padding: 20px;
+}
+
+.lomakeotsikko {
+    text-align: center;
+    font-size: clamp(10px, 5vw, 30px);
+    }
+
+input, select, textarea, button {
+    text-align: left;
+    font-size: 25px;
+    margin: 5px, auto;
+    width: 90%;
+}
+
+.lomakealue {
+    text-align: center;
+}
+
+button {
+    padding: 10px;
+}
+
+.intro,
+.tutustumismainos_mobiili,
+.lomakealue {
+    font-size: 25px;
+}
+
+@media (min-width: 999px) {
+    .jasenyys_main {
+        margin: 0rem 2rem;
+    }
+
+    .jasenyydet {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .tutustumismainos_mobiili {
+        display: none;
+    }
+
+    .tutustumismainos_desktop {
+        display: block;
+    }
+
+    .mainos {
+        height: 400px;
+        width: 800px;
+        border-radius: 15px 15px 15px 15px;
+    }
+
+    .jasenyyssivulomake {
+        background-color: white;
+        margin: 0 auto;
+        box-sizing: border-box;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+        vertical-align: top;
+        display: inline-block;
+        text-align: left;
+        font-size: 25px;
+        width: auto;
+    }
+
+    .lomakeotsikko {
+        text-align: left;
+    }
+
+    input, select, textarea, button {
+        font-size: 25px;
+        margin: 5px;
+        width: auto;
+    }
+} 
+
+
+/* PALVELUT */
+
+.palvelut_main *,
+.palvelut_intro *,
+.palvelugrid * 
+table * {
+    min-width: 0;
+}
+
+.palvelut_main {
+    text-align: center;
+    align-items: center;
+}
+
+.palveluesittely, 
+.ryhmaliikuntakalenteri {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.kuvakollaasi {
+    align-items: center;
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+.kuvakollaasi img {
+    height: auto;
+    display: block;
+    max-width: 100%;
+    align-items: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #196691;
+    font-size: 12px;
+    align-items: center;
+    margin: 0;
+    table-layout: fixed;
+}
+
+table th, table td {
+    border: 2px solid #196691;
+    text-align: center;
+    font-size: 8px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+table.wrapper {
+    overflow-x: auto;
+    width: 100%;
+}
+
+
+@media (min-width: 999px) {
+    .palvelut_main {
+        display:grid;
+        grid-auto-flow: row;
+        grid-template-areas: 
+        "palvelut_intro"
+        "palvelugrid";
+        box-sizing: border-box;
+        row-gap: 2rem; 
+        column-gap: 1rem;
+        padding: 2rem; 
+        margin: auto;
+        background-color: whitesmoke; 
+        text-align: left;
+    }
+
+    .palvelut_intro {
+        grid-area: palvelut_intro;
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .palvelugrid {
+        grid-area: palvelugrid;
+        display: grid;
+        grid-auto-flow: row;
+        overflow: hidden;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        row-gap: 1rem;
+        column-gap: 1rem;
+        text-align: left;
+        align-items: left;
+    }
+
+    .palveluesittely {
+        text-align: left;
+    }
+
+    .kuvakollaasi {
+    height: auto;
+    display: block;
+    }
+
+    table { 
+        width: 100%; 
+        border-collapse: collapse; 
+        border: 2px solid #196691; 
+
+    } 
+    
+    table th, table td { 
+        border: 2px solid #196691; 
+        text-align: center; 
+        white-space: normal; 
+        font-size: 12px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    } 
+    table.wrapper { 
+        overflow-x: auto; }
+}
+
+/* FOOTER */
+
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+}
+
+.footerlogo {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.footerotsikko {
+    font-weight: bold;
+}
+
+.footer_sisalto {
+    background-color: #444;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column; 
+    gap: 20px;
+}
+
+.somet a,.somet a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.footerlinkki {
+    font-size: 16px;
+    padding: 0rem 0rem;
+}
+
+@media (min-width: 999px) {
+    .footer {
+        flex-direction: row; 
+        justify-content: space-around;
+        padding: 40px;
+    }
+
+    .footer_sisalto {
+        flex-direction: row; 
+        background-color: transparent; 
+        justify-content: center;
+        gap: 55px;
+    }
+}
