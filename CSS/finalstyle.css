@@ -360,18 +360,18 @@ html, body {
 
 @media (min-width: 550px) {
     main {
-    display: grid;
-    grid-template-areas:
-        "banner"
-        "maincontent" 
-        "etusivukortit"
-        "arvolupaus";
-        row-gap: 2rem; 
-        column-gap: 1rem;
-        padding: 2rem; 
-        max-width: 1400px;
-        margin: auto;
-        background-color: whitesmoke;
+        display: grid;
+        grid-template-areas:
+            "banner"
+            "maincontent" 
+            "etusivukortit"
+            "arvolupaus";
+            row-gap: 2rem; 
+            column-gap: 1rem;
+            padding: 2rem; 
+            max-width: 100%;
+            margin: auto;
+            background-color: whitesmoke;
         
     }
 
@@ -437,18 +437,18 @@ html, body {
 
 @media (min-width: 550px) {
     .Aboutus_main {
-    display: grid;
-    grid-template-areas:
-        "aboutus"
-        "salikuva"
-        "location"
-        "maps"
-        "historia"
-        ;
-    grid-template-rows: row;
-    row-gap: 5rem;
-    column-gap: 5rem;
-    padding: 5rem;
+        display: grid;
+        grid-template-areas:
+            "aboutus"
+            "salikuva"
+            "location"
+            "maps"
+            "historia"
+            ;
+        grid-template-rows: row;
+        row-gap: 5rem;
+        column-gap: 5rem;
+        padding: 5rem;
     }
 
     .Aboutus {
@@ -501,7 +501,7 @@ html, body {
     }
 
     .maps {
-    grid-area: maps;
+        grid-area: maps;
         display: flex;
         justify-content: right; 
         padding: 15px;
@@ -545,14 +545,8 @@ html, body {
     flex-wrap: wrap;
 }
 
-@media (min-width: 550px) {
-.jasenyydet {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
+.tutustumismainos_desktop {
+    display: none;
 }
 
 .jasenyyskortti {
@@ -570,12 +564,6 @@ html, body {
     font-size: 18px;
 }
 
-.mainos {
-    height: 400px;
-    width: 800px;
-    border-radius: 15px 15px 15px 15px;
-}
-
 .otsikko {
     background-color: #196691;
     color: white;
@@ -587,7 +575,6 @@ html, body {
     text-align: center;
     border-radius: 10px 10px 0 0;
 }
-
 
 .korttiotsikko {
     padding-top: 25px;
@@ -613,10 +600,6 @@ html, body {
     align-items: center;
     gap: 5px;
     padding: 5px;
-}
-
-.lomakealue {
-    text-align: center;
 }
 
 .jasenyyssivulomake {
@@ -661,11 +644,47 @@ input, select, textarea, button {
     width: 90%;
 }
 
+.lomakealue {
+    text-align: center;
+}
+
 button {
     padding: 10px;
 }
 
-@media (min-width: 550px) {
+.intro,
+.tutustumismainos_mobiili,
+.lomakealue {
+    font-size: 25px;
+}
+
+@media (min-width: 999px) {
+    .jasenyys_main {
+        margin: 0rem 2rem;
+    }
+
+    .jasenyydet {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .tutustumismainos_mobiili {
+        display: none;
+    }
+
+    .tutustumismainos_desktop {
+        display: block;
+    }
+
+    .mainos {
+        height: 400px;
+        width: 800px;
+        border-radius: 15px 15px 15px 15px;
+    }
+
     .jasenyyssivulomake {
         background-color: white;
         margin: 0 auto;
@@ -684,11 +703,12 @@ button {
     }
 
     input, select, textarea, button {
-    font-size: 25px;
-    margin: 5px;
-    width: auto;
+        font-size: 25px;
+        margin: 5px;
+        width: auto;
     }
 } 
+
 
 /* PALVELUT */
 
@@ -749,7 +769,7 @@ table.wrapper {
 }
 
 
-@media (min-width: 550px) {
+@media (min-width: 999px) {
     .palvelut_main {
         display:grid;
         grid-auto-flow: row;
@@ -853,7 +873,7 @@ table.wrapper {
     padding: 0rem 0rem;
 }
 
-@media (min-width: 550px) {  
+@media (min-width: 999px) {  
     .yhteystiedot {
         display: flex;
     }
