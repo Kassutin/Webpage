@@ -15,6 +15,13 @@ html, body {
 }
 
 
+main {
+        row-gap: 2rem; 
+        column-gap: 1rem;
+        padding: 2rem; 
+}
+
+
 
 /* HEADER */
 
@@ -232,8 +239,7 @@ html, body {
 }
 
 .salikuva img {
-    height: 120%;
-    width: 120%;      
+    width: 100%;      
     object-fit: contain;
     align-self: center; 
     transition: transform 0.3s ease; 
@@ -243,7 +249,7 @@ html, body {
 .arvolupaus {
     grid-area: arvolupaus;
     display: flex;
-    justify-content: left; 
+    justify-content: center; 
     flex-direction: row;
     margin-top: 0px;
     padding: 15px;
@@ -252,7 +258,6 @@ html, body {
 }
 
 .maincontent {
-
     margin-bottom: 30px;
 }
 
@@ -359,7 +364,7 @@ html, body {
 
 /*kortit loppuu */
 
-@media (min-width: 550px) {
+@media (min-width: 999px) {
     .etusivu_main {
         text-align: center;
         display: grid;
@@ -384,10 +389,16 @@ html, body {
         padding: 15px;
         gap: 100px;
         font-size: 25px;
+        justify-content: center;
     }
 
     .salikuva {
-    display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .salikuva img {
+        max-width: 50%;
     }
 
 }
@@ -535,6 +546,7 @@ html, body {
 
 .jasenyys_main {
     text-align: center;
+
 }
 
 .jasenyydet {
