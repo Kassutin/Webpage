@@ -164,8 +164,8 @@ main {
     
     nav ul {
         display: flex;
-        justify-content: space-between;
-        gap: 10px;
+        justify-content: center;
+        gap: 40px;
         margin: 0;
         padding: 10px;
         background-color: #444;
