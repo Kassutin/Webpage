@@ -450,10 +450,9 @@ main {
     .Aboutus_main {
         display: grid;
         grid-template-areas:
-            "aboutus"
+            "Aboutus"
             "salikuva"
             "location"
-            "maps"
             "historia"
             ;
         grid-template-rows: row;
@@ -463,9 +462,9 @@ main {
     }
 
     .Aboutus {
-        grid-area: aboutus;
-        display: flex;
-        justify-content: left; 
+        grid-area: Aboutus;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         margin-top: 0px;
         padding: 15px;
         gap: 10px;
@@ -500,8 +499,8 @@ main {
 
     .location {
         grid-area: location;
-        display: flex;
-        justify-content: left; 
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         margin-top: 0px;
         padding: 15px;
         gap: 10px;
@@ -512,9 +511,6 @@ main {
     }
 
     .maps {
-        grid-area: maps;
-        display: flex;
-        justify-content: right; 
         padding: 15px;
         gap: 60px  ;
         position: relative;
@@ -523,8 +519,8 @@ main {
 
     .historia {
         grid-area: historia;
-        display: flex;
-        justify-content: left; 
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         margin-top: 0px;
         padding: 15px;
         gap: 10px;
@@ -893,5 +889,11 @@ table.wrapper {
         background-color: transparent; 
         justify-content: center;
         gap: 55px;
+        font-size: 25px;
+    }
+
+    .footerlinkki {
+        font-size: 25px;
+        padding: 0rem 0rem;
     }
 }
