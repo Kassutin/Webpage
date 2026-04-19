@@ -11,6 +11,13 @@ html, body {
     /*margin: 0;*/
     background-color: whitesmoke;
     font-family: sans-serif; 
+    min-height: 100vh;
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+    grid-template-rows: auto 1fr auto;
        /* Tänne voisi merkata fontit. Varmaan käytetään kaikkialla samaa fonttia? */ /* Vältetään globaalia fonttikokoa, mielummin määritellään case to case pohjalla*/
 }
 
