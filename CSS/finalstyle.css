@@ -246,7 +246,7 @@ main {
 }
 
 .salikuva img {
-    width: 100%;      
+    width: 25%;      
     object-fit: contain;
     align-self: center; 
     transition: transform 0.3s ease; 
