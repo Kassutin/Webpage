@@ -249,11 +249,10 @@ main {
 }
 
 .salikuva img {
-    width: 25%;      
-    object-fit: contain;
-    align-self: center; 
-    transition: transform 0.3s ease; 
-    justify-content: center;
+    width: 25%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .arvolupaus {
@@ -434,6 +433,7 @@ main {
 .historia {
     padding-top: 25px;
     padding-bottom: 25px;
+    font-size: 25px;
 }
 
 .aboutus_img,
