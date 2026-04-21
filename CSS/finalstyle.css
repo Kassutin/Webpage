@@ -745,13 +745,13 @@ table * {
 .palvelut_main {
     text-align: center;
     align-items: center;
-    font-size: 25px;
 }
 
 .palveluesittely, 
 .ryhmaliikuntakalenteri {
     padding-top: 25px;
     padding-bottom: 25px;
+    font-size: 25px;
 }
 
 .kuvakollaasi {
